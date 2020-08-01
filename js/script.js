@@ -14,13 +14,14 @@ for (let i = 0; i <2; i++) {
      const  a = prompt("Odin iz poslednix prosmotrennix filmov?", ""),
             b = prompt("Na skolko ocenite ego", "");
 
-    if (a != null && b != null && a != " " && b != " " && a.lenght < 50) {
+    if (a != null && b != null && a != "" && b != "" && a.length < 50) {
         personalMovieDB.movies[a] = b;
         console.log("Done");
 
     } else {
-        console.log("Error!");
         i--;
+        console.log("Error!");
+        
     }     
 }
  console.log (personalMovieDB); 
