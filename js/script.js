@@ -9,18 +9,21 @@ const personalMovieDB = {
     genres: [],
     privat: false
 };
-
-const a = prompt("Odin iz poslednix prosmotrennix filmov?", ""),
-      b = +prompt("Na skolko ocenite ego", ""),
-      c = prompt("Odin iz poslednix prosmotrennix filmov?", ""),
-      d = +prompt("Na skolko ocenite ego", "");
-      
- personalMovieDB.movies[a] = b;
- personalMovieDB.movies[c] = d;
-
- console.log(personalMovieDB);
-
-
-
   
+for (let i = 0; i <2; i++) {
+     const  a = prompt("Odin iz poslednix prosmotrennix filmov?", ""),
+            b = prompt("Na skolko ocenite ego", "");
+
+    if (a != null && b != null && a != " " && b != " " && a.lenght < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log("Done");
+
+    } else {
+        console.log("Error!");
+        i--;
+    }     
+}
+ console.log (personalMovieDB); 
+    
+     
 
